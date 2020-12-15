@@ -1,0 +1,43 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.7.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	 id "org.sonarqube" version "3.0"
+}
+
+group = 'cl.devweb'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testCompile 'io.rest-assured:rest-assured'
+	compile group: 'com.sun.xml.bind', name: 'jaxb-osgi', version: '2.3.2'
+}
+
+test {
+	useJUnitPlatform()
+	testLogging.showStandardStreams = true
+
+}
+
+apply plugin: "eclipse"
+
+sonarqube {
+	properties {
+		property "sonar.sourceEncoding", "UTF-8"
+ 	}
+}
