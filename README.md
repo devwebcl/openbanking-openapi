@@ -1,6 +1,6 @@
 # Getting Started
 
-- milestone 1
+- milestone 2
 
 ### Reference Documentation
 For further reference, please consider the following sections:

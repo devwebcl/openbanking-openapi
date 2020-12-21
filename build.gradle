@@ -26,6 +26,8 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testCompile 'io.rest-assured:rest-assured'
 	compile group: 'com.sun.xml.bind', name: 'jaxb-osgi', version: '2.3.2'
+
+	compile "io.swagger:swagger-java-client:1.0.0"
 }
 
 test {
