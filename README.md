@@ -2,6 +2,8 @@
 
 - milestone 4
 
+https://github.com/bitnami/bitnami-docker-redis
+
 - docker compose yaml
 
 $ docker run --name redis -e ALLOW_EMPTY_PASSWORD=yes bitnami/redis:latest
