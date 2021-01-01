@@ -1,5 +1,6 @@
 package cl.devweb.openbanking.demo.service;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import cl.devweb.openbanking.demo.dto.Transaction;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
+@Cacheable(value = "variablesMapaCache", key = "#version")
 public class TransactionService {
 
 	private static int min = 1;

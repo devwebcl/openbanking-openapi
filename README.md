@@ -1,6 +1,17 @@
 # Getting Started
 
-- milestone 2
+- milestone 4
+
+- docker compose yaml
+
+$ docker run --name redis -e ALLOW_EMPTY_PASSWORD=yes bitnami/redis:latest
+
+$ curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-redis/master/docker-compose.yml > docker-compose.yml
+$ docker-compose up -d
+
+
+
+
 
 ### Reference Documentation
 For further reference, please consider the following sections:
