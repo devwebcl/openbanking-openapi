@@ -30,6 +30,12 @@ dependencies {
 	compile "io.swagger:swagger-java-client:1.0.0"
 	compile 'org.springframework.boot:spring-boot-starter-webflux'
     compile 'org.projectreactor:reactor-spring:1.0.1.RELEASE'
+
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
 }
 
 test {
